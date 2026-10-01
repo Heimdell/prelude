@@ -17,4 +17,4 @@ length : {{Foldable F}} → F A → ℕ
 length = fold-map (const 1)
 
 any : {{Foldable F}} → (A → Bool) → F A → Bool
-any f = fold-r (_∨_ ∘ f) true
+any f = fold-r (_∨_ ∘ f) false

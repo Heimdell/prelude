@@ -15,3 +15,11 @@ module _ where
   instance
     string-is-eq : Eq String
     string-is-eq ._==_ = _==-s_
+
+module _ where
+
+  open import Data.Char.Properties renaming (_==_ to _==-c_)
+
+  instance
+    char-is-eq : Eq Char
+    char-is-eq ._==_ = _==-c_

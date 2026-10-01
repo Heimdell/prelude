@@ -14,7 +14,7 @@ open import Data.Maybe using (Maybe; just; nothing; maybe) public
 open import Relation.Binary.PropositionalEquality using (cong; _≡_; refl; sym) public
 open import Data.Nat using (ℕ; suc; zero; _∸_) renaming (_+_ to _+-ℕ_) public
 open import Data.Fin using (Fin; suc; zero) public
-open import Data.String using (String; uncons; fromList) renaming (length to strlen) public
+open import Data.String using (String; uncons; fromList; toList) renaming (length to strlen) public
 open import Data.List.Membership.Propositional using (_∈_) public
 
 open import Common.Variables

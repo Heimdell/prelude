@@ -13,6 +13,9 @@ open import Control.Alternative.Instances
 asum : {{Foldable F}} → {{Alternative M}} → F A → M A
 asum = fold-r (choose ∘ pure) loose
 
+backtrack : {{Foldable F}} → {{Alternative M}} → (A → M B) → F A → M B
+backtrack f = fold-r (_<|>_ ∘ f) loose
+
 guard : {{Alternative F}} → Bool → F ⊤
 guard = λ where
   false → loose
