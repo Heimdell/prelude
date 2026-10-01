@@ -1,0 +1,11 @@
+name: prelude-0.1
+include: src
+depend:
+  standard-library-2.3
+flags:
+  --postfix-projections
+  --hidden-argument-puns
+  --guardedness
+  --type-in-type
+
+  -WnoUnsupportedIndexedMatch
